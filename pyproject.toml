@@ -1,0 +1,22 @@
+[project]
+name = "fhs-testautomation-basgrupp-6-2026"
+version = "0.1.0"
+description = "Skolprojekt för testning"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pytest",
+    "requests",
+    "playwright",
+    "pytest-playwright",
+    "faker",
+    "pytest-rerunfailures"
+]
+
+[tool.pytest.ini_options]
+addopts = "-v -s --browser chromium --headed"
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.setuptools]
+py-modules = ["petstore",]
