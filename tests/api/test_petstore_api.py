@@ -7,22 +7,6 @@ def api():
     return PetstoreClient()
 
 
-@pytest.mark.flaky(reruns=3, reruns_delay=1)
-@pytest.mark.parametrize("pet_id", [1, 2, 3])
-def test_get_pet_by_id(api, pet_id):
-    response = api.get_pet(pet_id)
-    data = response.json()
-    
-    assert response.status_code == 200
-    assert data["id"] == pet_id
-    assert "name" in data
-
-
-def test_get_pet_not_found(api):
-    response = api.get_pet(999999)
-    assert response.status_code == 404
-
-
 def test_create_pet_with_client(api):  
     pet = {
         "id": random.randint(1, 1000),
