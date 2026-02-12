@@ -46,6 +46,7 @@ jobs:
 
         
   system-tests:
+    needs: integration-tests
     runs-on: ubuntu-latest
 
     steps:
