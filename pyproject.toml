@@ -14,7 +14,6 @@ dependencies = [
 ]
 
 [tool.pytest.ini_options]
-addopts = "-v -s --browser chromium --headed"
 testpaths = ["tests"]
 pythonpath = ["."]
 
