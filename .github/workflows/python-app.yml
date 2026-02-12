@@ -42,7 +42,7 @@ jobs:
     
     - name: Test with pytest
       run: |
-        pytest
+        pytest tests/api
 
         
   system-tests:
@@ -63,4 +63,4 @@ jobs:
     
     - name: Test with pytest
       run: |
-        pytest e2e
+        pytest tests/e2e
