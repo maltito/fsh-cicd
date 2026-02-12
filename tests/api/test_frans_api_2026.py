@@ -2,7 +2,6 @@ from unicodedata import name
 import requests
 from frans_api_helper import create_student
 from frans_api_helper import delete_a_student
-from frans_api_helper import update_a_student
 base_url_original = "https://test-379574553568.us-central1.run.app/student"
 base_url = "https://test-379574553568.us-central1.run.app/"
 API_KEY = "malte-testar-2026"
